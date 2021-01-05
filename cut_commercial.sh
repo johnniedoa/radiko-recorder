@@ -61,5 +61,5 @@ do
   fi
 done
 
-ffmpeg -f concat -safe 0 -i list.txt -c copy -y "processed_${output}"
+ffmpeg -f concat -safe 0 -i list.txt -c copy -y "${output}"
 rm -rf sliced/*.mp3
