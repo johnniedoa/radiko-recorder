@@ -13,6 +13,7 @@ Usage:
   ./download_contents.sh -s TBS -n title -v "JUNK 伊集院光・深夜の馬鹿力" -o out.m4a
   ./download_contents.sh -s LFR -n url -v "https://www.allnightnippon.com/nn/" -o out.m4a
   ./download_contents.sh -s TBS -n pfm -v "赤江珠緒/カンニング竹山" -o out.mp3 -x
+  ./download_contents.sh -s INT -p 'Dave Fromm, Ali Morizumi' -t 'The Dave Fromm Show, Hour 1' -o out.m4a
 Options:
   -s STATION  Station ID (see http://radiko.jp/v3/station/region/full.xml)
   -n NODE     Node name  (see http://radiko.jp/v3/program/station/weekly/{STATION}.xml)
