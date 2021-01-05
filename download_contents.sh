@@ -104,7 +104,6 @@ else
   echo "detected programId : ${program_id} / ${fromtime}~${totime}"
 fi
 
-exit
 # Authorize 1
 auth1_res=$(curl \
     --silent \
