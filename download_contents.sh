@@ -95,7 +95,7 @@ fi
 if test -z "${pfm}" -a -z "${title}" ; then
   fromtime=`xmllint http://radiko.jp/v3/program/station/weekly/${station_id}.xml --xpath "//${node}[contains(text(), '${value}') and not(.=preceding::${node})]/parent::node()/@ft" | sed -e 's/ ft="//' | sed -e 's/00"//' | cut -d" " -f1`
   totime=`xmllint http://radiko.jp/v3/program/station/weekly/${station_id}.xml --xpath "//${node}[contains(text(), '${value}') and not(.=preceding::${node})]/parent::node()/@to" | sed -e 's/ to="//' | sed -e 's/00"//' | cut -d" " -f1`
-  program_id=`xmllint http://radiko.jp/v3/program/station/weekly/TBS.xml --xpath "//url[contains(text(), 'http://www.tbsradio.jp/tama954/') and not(.=preceding::url)]/parent::node()/@id" | sed -e "s/ id=//"`
+  program_id=`xmllint http://radiko.jp/v3/program/station/weekly/TBS.xml --xpath "//url[contains(text(), '${value}') and not(.=preceding::url)]/parent::node()/@id" | sed -e "s/ id=//"`
   echo "detected programId : ${program_id} / ${fromtime}~${totime}"
 else
   fromtime=`xmllint http://radiko.jp/v3/program/station/weekly/${station_id}.xml --xpath "(//prog[title[contains(text(), '${title}')] and pfm[contains(text(), '${pfm}')]])[1]/@ft" | sed -e 's/ ft="//' | sed -e 's/00"//' | cut -d" " -f1`
